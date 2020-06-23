@@ -4,6 +4,12 @@
 - [Data](#data)
 - [Sample Input](#sample-input)
 - [Implementation](#implementation)
+  - [`idle` State](#idle-state)
+  - [`start` State](#start-state)
+  - [`takex`, `takey` and `mem` States](#takex-takey-and-mem-states)
+  - [`c..x`, `c..y`, `c...` and `c...d` States](#cx-cy-c-and-cd-states)
+  - [`comp_min` and `comp` States](#compmin-and-comp-states)
+  - [`stop` and `done` States](#stop-and-done-states)
 - [Test Generator](#test-generator)
 
 ## Project Description
@@ -58,7 +64,31 @@ The solution to this project I've implemented is a Full State Machine. The code 
 Below is the scheme of the machine:
 ![scheme](/fsm.png)
 
-If you want to dig deeper in the details of the states, in the report a full description of each one of them is given.
+Let's dig deeper into the different states.
+
+### `idle` State
+
+It's the starting state of the machine. In such state, we're waiting for the `start` signal that will make the computation begin. If, during the execution, the `reset` signal is put to 1 or the `start` signal is put to 0, the machine will return to this state.
+
+### `start` State
+
+It's the state where the computation begins. It's where the variable initialization is done and also where the memory is enabled for the read of the data.
+
+### `takex`, `takey` and `mem` States
+
+The first two are the states where the coordinates of the target point are read drom the memory. `mem` is a dummy state used to give the circuit enough time to memorize the y coordinate before proceeding to the next computation.
+
+### `c..x`, `c..y`, `c...` and `c...d` States
+
+Those are the states where the distances of the different centroids to the target point are actually computed. `c..x` and `c..y` are where the coordinates are read, `c..` is again a dummy state to correctly memorize the y coordinate of the centroid and `c..d` is the state where the distance is computed.
+
+### `comp_min` and `comp` States
+
+In the first state, the minimum distance between the ones computed above is found. In the second one, the output mask is generated.
+
+### `stop` and `done` States
+
+Those are the two final states: they are used to write the result in memory and then to send the `done` signal to finish the computation.
 
 ## Test Generator
 

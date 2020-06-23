@@ -1,5 +1,11 @@
 # [Digital Logic Design](https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=EVENTO&c_insegn=085877&aa=2018&k_cf=225&k_corso_la=358&ac_ins=0&k_indir=II3&lang=EN&tipoCorso=ALL_TIPO_CORSO&semestre=1&idItemOfferta=137349&idRiga=229504&codDescr=085877) 2019, Course Project
 
+- [Project Description](#project-description)
+- [Data](#data)
+- [Sample Input](#sample-input)
+- [Implementation](#implementation)
+- [Test Generator](#test-generator)
+
 ## Project Description
 Conceptually, this project is rather easy: we are given a bidimensional space and the positions of _N_ points (**centroids**) inside such space. The goal is to build a hardware component through VHDL able to find the nearest centroids in terms of Manhattan distance to a given point.
 

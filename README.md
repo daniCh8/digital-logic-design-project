@@ -1,2 +1,1 @@
-# digital-logic-design-project
-Digital Logic Design project, PoliMi 2019
+# [Digital Logic Design](https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=EVENTO&c_insegn=085877&aa=2018&k_cf=225&k_corso_la=358&ac_ins=0&k_indir=II3&lang=EN&tipoCorso=ALL_TIPO_CORSO&semestre=1&idItemOfferta=137349&idRiga=229504&codDescr=085877) 2019, Course Project

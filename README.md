@@ -44,3 +44,16 @@ Data is stored in a memory with byte addressing, starting at position 0:
 | 17 | 78 | X target centroid |
 | 18 | 33 | Y target centroid |
 | 19 | 17 | output mask `00010001` |
+
+## Implementation
+
+The solution to this project I've implemented is a Full State Machine. The code is available [here](/project.vhd). For a full description of the architecture and the implementation, you can check the [report](/report.pdf).
+
+Below is the scheme of the machine:
+![scheme](/fsm.png)
+
+If you want to dig deeper in the details of the states, in the report a full description of each one of them is given.
+
+# Test Generator
+
+Since we weren't given many testsets, I've also implemented a generator in C. It's available [here](/test_generator.c), and it generates a txt file that contains inputs and outputs of a new batch. The content of such txt can be copied and pasted into the environment inside a pre-existing test file. I found this way of generating tests quicker than generating full new full test files (like the ones that can be found inside this [directory](/testbench/)) since importing new files to the project would usually be slow and cumbersome.

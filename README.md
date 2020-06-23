@@ -17,6 +17,8 @@ Conceptually, this project is rather easy: we are given a bidimensional space an
 
 The space is a square of size `256*256`. Of the given _N_ centroids, only _K<=N_ are to be considered: this is described in an input mask where every bit is 1 if the centroid is to consider and 0 otherwise.
 
+The difficulties of this project lie on the language and the environment used in it. Indeed, VHDL and digital circuit design are programming paradigms way different than the ones a computer scientist usually uses, due to their different application targets.
+
 ## Data
 
 Data is stored in a memory with byte addressing, starting at position 0:

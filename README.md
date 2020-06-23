@@ -56,4 +56,4 @@ If you want to dig deeper in the details of the states, in the report a full des
 
 # Test Generator
 
-Since we weren't given many testsets, I've also implemented a generator in C. It's available [here](/test_generator.c), and it generates a txt file that contains inputs and outputs of a new batch. The content of such txt can be copied and pasted into the environment inside a pre-existing test file. I found this way of generating tests quicker than generating full new full test files (like the ones that can be found inside this [directory](/testbench/)) since importing new files to the project would usually be slow and cumbersome.
+Since we weren't given many testsets, I've also implemented a generator in C. It's available [here](/test-generator.c), and it generates a txt file that contains inputs and outputs of a new batch. The content of such txt can be copied and pasted into the environment inside a pre-existing test file. I found this way of generating tests quicker than generating full new full test files (like the ones that can be found inside this [directory](/testbench/)) since importing new files to the project would usually be slow and cumbersome.
